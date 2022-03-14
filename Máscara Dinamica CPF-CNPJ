@@ -1,0 +1,12 @@
+if( isset($param['key']) && $param['key'] == 'F')
+        {
+            TScript::create( " $('input[name=cpf_cnpj]').off();
+                           $('input[name=cpf_cnpj]').val('');
+                           $('input[name=cpf_cnpj]').keypress(function() {  tentry_mask(this, event, '999.999.999-99') }); " );
+        }
+        elseif( isset($param['key']) && $param['key'] == 'J')
+        {
+            TScript::create( " $('input[name=cpf_cnpj]').off();
+                           $('input[name=cpf_cnpj]').val('');
+                           $('input[name=cpf_cnpj]').keypress(function() {  tentry_mask(this, event, '99.999.999/9999-99') }); " );
+        }
